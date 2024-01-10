@@ -10,7 +10,6 @@
   <title>Login </title>
 </head>
 
-
 <body>
   <div class="container">
     <form id="form" class="form">
@@ -31,9 +30,26 @@
         </div>
         <BR>
         Not yet member? <a href="">SIGNUP NOW</a>
-        <button type="submit"><a href="index.html"> LOGIN</a></button>
+        <button type="submit">LOGIN</button>
     </form>
   </div>
+  <script>
+    document.getElementById("form").addEventListener("submit",function(e){
+   
+    e.preventDefault()
+    var name = document.getElementById("username")
+    var password = document.getElementById("password")
+    console.log(password.value)
+    if(password.value==""){
+      document.getElementById("showerror").innerHTML = "enter password"
+    }
+    else{
+      document.getElementById("showerror").innerHTML = ""
+    }
+    console.log(name.value)
+  })
+  
+  </script>
 
 
 </body>
